@@ -5,17 +5,24 @@
   text-align: center;
 }
 .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 20px;
   color: #fff;
   border-radius: 10px;
   width: fit-content;
   margin: 0 auto;
   background-color: #00043c;
+  height: 300px;
 }
 .formLine {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.formLineItem {
+  height: 73px;
 }
 .formLine div {
   align-self: flex-start;
@@ -54,6 +61,8 @@
   border: 1.5px solid #007aff;
 }
 .inputError {
+  font-size: 10px;
+  color: red;
 }
 .inputCheckbox {
 }

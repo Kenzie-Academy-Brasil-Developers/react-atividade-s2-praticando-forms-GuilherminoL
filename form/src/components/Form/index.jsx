@@ -58,11 +58,11 @@ const Form = () => {
           <label className="formLineItem">
             <input
               className="input"
-              type="text"
-              {...register("email")}
-              placeholder="Insira seu email"
+              type="tel"
+              {...register("tel")}
+              placeholder="Insira seu telefone"
             />
-            <p className="inputError">{errors.email?.message}</p>
+            <p className="inputError">{errors.tel?.message}</p>
           </label>
         </div>
 
@@ -94,16 +94,16 @@ const Form = () => {
               {...register("confirmPassword")}
               placeholder="Confirme sua senha"
             />
-            <p className="inputError">{errors.confirmPassword?.message}</p>
+            <p className="inputError">{errors.confirmPassword?.message} </p>
           </label>
           <label className="formLineItem">
             <input
               className="input"
-              type="tel"
-              {...register("tel")}
-              placeholder="Insira seu telefone"
+              type="text"
+              {...register("email")}
+              placeholder="Insira seu email"
             />
-            <p className="inputError">{errors.tel?.message}</p>
+            <p className="inputError">{errors.email?.message}</p>
           </label>
         </div>
         <div className="formLine">
