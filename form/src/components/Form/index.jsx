@@ -124,7 +124,7 @@ const Form = () => {
             <p className="inputError">{errors.terms?.message}</p>
           </label>
           <button className="submitButton" type="submit">
-            Entrar para Kenzie !
+            Entrar para Kenzie
           </button>
         </div>
       </form>

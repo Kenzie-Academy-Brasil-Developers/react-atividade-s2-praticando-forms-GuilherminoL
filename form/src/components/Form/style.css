@@ -66,3 +66,23 @@
 }
 .inputCheckbox {
 }
+@media (max-width: 500px) {
+  .form {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .formLineItem {
+    display: flex;
+    margin: auto;
+  }
+  .input {
+    margin: auto;
+    width: 70%;
+  }
+  .termsText {
+    width: 540%;
+  }
+  .submitButton {
+    font-size: 11px;
+  }
+}
