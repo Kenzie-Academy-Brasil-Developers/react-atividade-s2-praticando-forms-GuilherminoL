@@ -1,0 +1,59 @@
+.formTitle {
+  color: #fff;
+  margin: 0;
+  padding: 22px 0;
+  text-align: center;
+}
+.form {
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #00043c;
+}
+.formLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formLine div {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.input {
+  padding: 12px;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.input:focus {
+  border: 2px solid #007aff;
+  outline: none;
+}
+.termsText {
+  margin-left: 5px;
+  width: 150px;
+  font-size: 12px;
+}
+.submitButton {
+  margin-right: 10px;
+  height: 43px;
+  width: 190px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  background-color: #007aff;
+  color: #fff;
+}
+.submitButton:hover {
+  transition: 0.3s;
+  background-color: #00043c;
+  border: 1.5px solid #007aff;
+}
+.inputError {
+}
+.inputCheckbox {
+}
