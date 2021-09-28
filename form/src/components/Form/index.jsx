@@ -2,8 +2,10 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
+import { useState } from "react";
 
 const Form = () => {
+  const [user, setUser] = useState({});
   const formValidator = yup.object().shape({
     name: yup.string().required("Campo obrigatório"),
 
@@ -37,8 +39,9 @@ const Form = () => {
     resolver: yupResolver(formValidator),
   });
 
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+  const onSubmit = (data) => {
+    setUser(data);
+  };
 
   return (
     <>
@@ -71,11 +74,22 @@ const Form = () => {
             <input
               className="input"
               type="text"
+              {...register("email")}
+              placeholder="Insira seu email"
+            />
+            <p className="inputError">{errors.email?.message}</p>
+          </label>
+          <label className="formLineItem">
+            <input
+              className="input"
+              type="text"
               {...register("confirmEmail")}
               placeholder="Confirme seu email"
             />
             <p className="inputError">{errors.confirmEmail?.message}</p>
           </label>
+        </div>
+        <div className="formLine">
           <label className="formLineItem">
             <input
               className="input"
@@ -85,8 +99,6 @@ const Form = () => {
             />
             <p className="inputError">{errors.password?.message}</p>
           </label>
-        </div>
-        <div className="formLine">
           <label className="formLineItem">
             <input
               className="input"
@@ -95,15 +107,6 @@ const Form = () => {
               placeholder="Confirme sua senha"
             />
             <p className="inputError">{errors.confirmPassword?.message} </p>
-          </label>
-          <label className="formLineItem">
-            <input
-              className="input"
-              type="text"
-              {...register("email")}
-              placeholder="Insira seu email"
-            />
-            <p className="inputError">{errors.email?.message}</p>
           </label>
         </div>
         <div className="formLine">
@@ -128,6 +131,18 @@ const Form = () => {
           </button>
         </div>
       </form>
+      <section>
+        {user.name && <h3>Nome: {user.name}</h3>}
+        {user.email && <h3>Email: {user.email}</h3>}
+        {user.confirmEmail && (
+          <h3>Confirmação de Email: {user.confirmEmail}</h3>
+        )}
+        {user.password && <h3>Senha: {user.password}</h3>}
+        {user.confirmPassword && (
+          <h3>Confirmação da Senha: {user.confirmPassword}</h3>
+        )}
+        {user.tel && <h3>Telefone: {user.tel}</h3>}
+      </section>
     </>
   );
 };
